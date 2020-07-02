@@ -1,0 +1,15 @@
+[package]
+name = "build"
+version = "0.1.0"
+authors = ['Sora Suegami']
+edition = "2018"
+
+[dependencies]
+id = {path = "../../PDCN_device/core/id", default-features = false}
+pdcn_system_crypto = { path = "../../PDCN_device/systems/crypto" }
+sha2 = "0.9.0"
+
+
+[[bin]]
+name = "main"
+path = "src/main.rs"

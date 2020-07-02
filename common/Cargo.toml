@@ -1,0 +1,32 @@
+[package]
+name = "PDCN_cortexM_common"
+version = "0.1.0"
+authors = ["Sora Suegami"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+cortex-m = "0.6.0"
+cortex-m-rt = "0.6.10"
+cortex-m-semihosting = "0.3.3"
+cortex-m-rtfm = "0.5.1"
+panic-halt = "0.2.0"
+id = {path = "../../PDCN_device/core/id", default-features = false}
+pdcn_wasm_management = { path = "../../PDCN_device/core/wasm_management" }
+pdcn_system_crypto = { path = "../../PDCN_device/systems/crypto" }
+parity-wasm = { version = "0.41", default-features = false }
+wasmi = {git="https://github.com/paritytech/wasmi.git", version = "0.6.2", default-features = false, features = ["core"]}
+hash-db = { version = "0.15.2", default-features = false }
+#heapless = { version = "0.5.5" }
+sp-std = {git="https://github.com/paritytech/substrate.git", version="2.0.0-dev", default_features = false}
+alloc-cortex-m = { git="https://github.com/rust-embedded/alloc-cortex-m.git", version="0.3.5", default-features = false }
+#wasm3 = {git="https://github.com/Veykril/wasm3-rs", default_features = false}
+nb = {git="https://github.com/rust-embedded/nb", version = "0.1.1", default-features = false}
+embedded-hal = {git="https://github.com/rust-embedded/embedded-hal.git", version="1.0.0-alpha.1", default-features = false}
+failure = {version="0.1.6", default-features = false, features = ["derive"]}
+
+
+
+[features]
+default = []

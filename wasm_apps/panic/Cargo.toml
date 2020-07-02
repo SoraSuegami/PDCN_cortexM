@@ -1,0 +1,14 @@
+[package]
+name = "panic"
+version = "0.1.0"
+authors = ['Sora Suegami']
+edition = "2018"
+
+[dependencies]
+
+[features]
+default = []
+
+[lib]
+crate-type = ["cdylib","rlib"]
+
