@@ -26,13 +26,10 @@ impl Sha256Base for Sha256 {
     }
 }
 
-//#[tokio::main]
 fn main(){
     const WASM_FOLDER:&str = "../wasm_apps";
     const CARGO_FILE_PATH:&str = "Cargo.toml";
     const DEFINE_FILE_PATH:&str = "../common/src/define.rs";
-    //let current = env::current_dir().unwrap(); 
-    //let wasm_relative = Path::new(WASM_FOLDER);
     let wasm_path_buf = fs::canonicalize(WASM_FOLDER).unwrap();
     let wasm_path = wasm_path_buf.as_path();
     if wasm_path.is_dir() {
